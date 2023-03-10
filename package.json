@@ -1,0 +1,19 @@
+{
+  "name": "dwm",
+  "version": "1.0.0",
+  "description": "Digitalization of daily work management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeetabhi01/dwm.git"
+  },
+  "author": "Abhijeet",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/jeetabhi01/dwm/issues"
+  },
+  "homepage": "https://github.com/jeetabhi01/dwm#readme"
+}
