@@ -4,8 +4,8 @@ const path = require('path')
 const app = express();
 // const plotly = require('plotly.js')
 // const fs = require('fs')
-app.set('view engine','ejs')
-app.set('views','Server/views')
+app.set('view engine', 'ejs')
+app.set('views', 'Server/views')
 
 const filepath = path.resolve(__dirname, 'test.xlsx');
 const workbook = xlsx.readFile(filepath);
@@ -16,17 +16,15 @@ const data = {
     //getting get requests everytime cache it once
     safetyPlan: xlsx.utils.sheet_to_json(workbook.Sheets[sheetNames[0]]),
     trcfr: xlsx.utils.sheet_to_json(workbook.Sheets[sheetNames[1]]),
-    actionPlan:xlsx.utils.sheet_to_json(workbook.Sheets[sheetNames[2]]),
+    actionPlan: xlsx.utils.sheet_to_json(workbook.Sheets[sheetNames[2]]),
 
 }
+    app.get('/', (req, res) => {
+        res.render('Safety/index')
+        // res.end();
+    });
 
-
-app.get('/', (req, res) => {
-    res.render('Safety/index')
-    // res.end();
-});
-
-app.get('/data',(req,res)=>{
+app.get('/data', (req, res) => {
     console.log(data)
     res.send(data);
 });
