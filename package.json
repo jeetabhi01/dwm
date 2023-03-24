@@ -2,8 +2,10 @@
   "name": "dwm",
   "version": "1.0.0",
   "description": "Digitalization of daily work management",
-  "main": "index.js",
+  "main": "Server/app.js",
   "scripts": {
+    "start": "node Server/app.js",
+    "dev": "nodemon --delay 500ms -w Server/app.js --watch Server/test.xlsx --watch Server/views/*.ejs --watch Server/views/Safety/* -Server/views/Quality/*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,7 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
     "plotly.js": "^2.19.1",
     "xlsx": "^0.18.5"
   },
