@@ -7,7 +7,7 @@
     "start": "node Server/app.js",
     "dev": "nodemon --delay 500ms -w Server/app.js --watch Server/test.xlsx --watch Server/views/Safety/* --watch Server/views/Quality/*",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format":"prettier -w Server/**/*.js"
+    "format": "prettier -w Server/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,7 @@
     "express-fileupload": "^1.4.0",
     "jquery": "^3.6.4",
     "mongoose": "^7.0.3",
-    "plotly.js": "^2.19.1",
-    "xlsx": "^0.18.5"
+    "plotly.js": "^2.19.1"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
