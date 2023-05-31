@@ -1,0 +1,42 @@
+<!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+<%-include('head.ejs')%>
+    <section id="update">
+        <section>
+            <div class="row my-5 mx-5">
+                <div class="col-md-8">
+                    <form id="update-target" action="/updateTarget" method="post">
+                        <label for="calendar" class="form-label">Target Month</label>
+                        <input type="date" class="form-control" id="calendar" name="month" required>
+                        <label for="target" class="form-label">Target</label>
+                        <input type="number" class="form-control" id="target" name="target" required>
+                        <label for="actual" class="form-label">Actual</label>
+                        <input type="number" class="form-control" id="actual" name="actual" required>
+                        <button type="submit" class="btn btn-primary my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row my-5 mx-5">
+                <div class="col-md-8">
+                    <form id="update-status" action="/updateStatus" method="post">
+                        <label for="action" class="form-label">Action Planned</label>
+                        <input type="text" class="form-control" id="action" name="action" required>
+                        <label for="calendar" class="form-label">Target Date</label>
+                        <input type="date" class="form-control" id="calendar" name="date" required>
+                        <label for="status" class="form-label">Status</label>
+                        <select id=status class="form-select my-1" aria-label="Status of Action" name="status" required>
+                            <option>R</option>
+                            <option>G</option>
+                            <option>Y</option>
+                        </select>
+                        <br>
+                       
+                        <label for="responsibility" class="form-label">Responsibility</label>
+                        <input type="text" class="form-control" id="responsibility" name="responsibility" required>
+                        <button type="submit" class="btn btn-primary my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </section>

@@ -1,0 +1,21 @@
+#sidebar {
+    background-color: darkslategray;
+    width: calc(18%);
+    height: 100%;
+    position: fixed;
+    overflow-x: hidden;
+    top: 0%;
+    left: 0%;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-content {
+    margin-left: 200px;
+    overflow-x: visible;
+}

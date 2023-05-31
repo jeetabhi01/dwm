@@ -1,0 +1,22 @@
+<%-include('../head.ejs');%>
+
+    <body>
+        <header>
+    <h1><%=title%>
+        </h1>
+</header>
+        <section id="myPlot">
+        </section>
+ 
+        <script type="text/javascript" charset="utf-8">
+                fetch('http://localhost:5000/safety/data')
+                .then(function (response) {
+                    return response.json();
+                }).then(function (apiJsonData) {
+                    renderDataAsChart(apiJsonData, 'trcfr', `<%-type%>`,'TRCFR Trend');
+                    })
+        </script>
+
+    </body>
+
+    </html>

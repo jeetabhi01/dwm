@@ -1,0 +1,50 @@
+section {
+    width: 80%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.js-plotly-plot .plotly .user-select-none{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+td {
+    text-align: center;
+    font-size: large;
+    border:solid 1px;
+}
+
+th{
+    text-align: center;
+    font-size: large;
+        border: solid 1px;
+        background-color: rgb(86, 86, 199);
+}
+
+table {
+    width:80%;;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:5%;
+    border:solid 1px;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(249, 250, 215);
+
+}
+
+form input[type="text"]{
+    margin-left:0;
+    display:block;
+    width:80%;
+    margin-bottom:3%;
+}
+
+#addChlAndAct, #qualitydo{
+    text-align:left;
+}

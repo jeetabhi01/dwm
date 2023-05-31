@@ -1,0 +1,20 @@
+<%- include('../head')%>
+<body>
+    <header>
+        <h1>
+            <%=title%>
+        </h1>
+    </header>
+    <section>
+        <table id = 'actionPlan'></table>
+    </section>
+    <script>
+        fetch('http://localhost:5000/quality/data').then(result=>{
+           return result.json();
+            // console.log(result.json());
+        })
+        .then(data =>{
+            // console.log(data)
+        renderDataInTheTablewithID(data,'action','actionPlan')})
+    </script>
+</body>

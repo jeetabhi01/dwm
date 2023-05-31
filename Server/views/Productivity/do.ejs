@@ -1,0 +1,37 @@
+<%-include('../head.ejs')%>
+
+<body>
+<header>
+    <h1>
+        <%=title%>
+    </h1>
+</header>
+<section id='productivitydo'>
+    <h1>Challenges</h1>
+    <ul>
+        <% if (challenges.length>0) { %>
+            <% challenges.forEach(challenge=>{ %>
+            <li id="challenge" data-id = `<%-challenge.id%>` onclick="showDetails(this)">  <%= challenge.challenge %> </li>
+            <% }) %>
+        <% } %>
+    </ul>
+
+    <h1>Actions</h1>
+    <ul>
+        <% if (actions.length>0) { %>
+            <% actions.forEach(action=>{ %>
+                <li id="action">
+                    <%= action.action %>
+                </li>
+            <% }) %>
+        <% } %>
+    </ul>
+</section>
+
+<script>
+    function showDetails(challenge){
+        const id = challenge.getAttribute('data-id');
+        alert(`The id is ${id}`)
+    }
+</script>
+</body>

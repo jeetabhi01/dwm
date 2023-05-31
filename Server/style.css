@@ -1,0 +1,26 @@
+/* body{
+    margin-left:auto;
+    margin-right:auto;
+} */
+div {
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10%;
+}
+
+#graph,
+#overall_altroz {
+    max-width: fit-content;
+    border: solid 1px;
+}
+
+#cpa {
+    display: inline-block;
+}
+
+#cpa_altroz,
+#cpa_punch {
+    /* max-width:40%; */
+    flex: content;
+    border: solid 1px;
+}

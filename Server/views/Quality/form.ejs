@@ -1,0 +1,19 @@
+<%-include ('../head')%>
+
+    <body>
+
+        <section id='addChlAndAct'>
+            <h1>Add Quality Challenges and Actions</h1>
+            <form action="/addQC" method="post">
+                <label for="Challenge">Challenge</label>
+                <input type="textarea" id="challenge" name="challenge" required>
+                <input type="submit">
+            </form>
+            <br>
+            <form action="/addQA" method="post">
+                <label for="action">Action</label>
+                <input type="textarea" id="action" name="action" required>
+                <input type="submit">
+            </form>
+        </section>
+    </body>

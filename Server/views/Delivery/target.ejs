@@ -1,0 +1,19 @@
+<%-include('../head.ejs') %>
+<body>
+<header>
+    <h1>
+        <%=title%>
+    </h1>
+</header>
+<section>
+    <table id='html-data-table'></table>
+</section>
+<script type="text/javascript">
+    fetch('http://localhost:5000/delivery/data')
+        .then(function (response) {
+            return response.json();
+        }).then(function (apiJsonData) {
+        renderDataInTheTablewithID(apiJsonData, 'deliveryTarget', 'html-data-table');
+    })
+</script>
+</body>

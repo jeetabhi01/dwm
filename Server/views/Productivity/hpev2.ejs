@@ -1,0 +1,23 @@
+<%-include('../head.ejs');%>
+
+    <body>
+        <header>
+            <h1>
+                <%=title%>
+            </h1>
+        </header>
+        <section id="myPlot">
+        </section>
+
+        <script type="text/javascript" charset="utf-8">
+            fetch('http://localhost:5000/productivity/data')
+                .then(function (response) {
+                    return response.json();
+                }).then(function (apiJsonData) {
+                    renderDataAsChart(apiJsonData, 'hpev2Trend', `<%-type%>`, 'HPev2 Trend');
+                })
+        </script>
+
+    </body>
+
+    </html>

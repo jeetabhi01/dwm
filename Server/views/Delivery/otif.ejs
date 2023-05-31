@@ -1,0 +1,24 @@
+<%-include('../head.ejs');%>
+
+<body>
+<header>
+    <h1>
+        <%=title%>
+    </h1>
+</header>
+<section id="myPlot">
+</section>
+
+<script type="text/javascript" charset="utf-8">
+    fetch('http://localhost:5000/delivery/data')
+        .then(function (response) {
+            return response.json();
+        }).then(function (apiJsonData) {
+        console.log(apiJsonData)
+        renderDataAsChart(apiJsonData, 'otif', `<%-type%>`, 'On Time In Full Delivery');
+    })
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<%- include('../head')%>
+
+    <body>
+        <section id="fileupload">
+            <form id="upload" ,enctype="multipart/form-data" method="post">
+                <input type="file" id="filedata" name="Upload file" accept=".xlsx" required single>
+                <br>
+                <input type="submit" value="Upload excel">
+            </form>
+
+        </section>
+
+        <script>
+            //send the file 
+            //Post data from excel format provide authentication needed
+            // console.log('executing form')
+            const form = document.getElementById('upload')
+            const sendFiles = async () => {
+                const myFiles = document.getElementById('filedata').files
+                const formData = new FormData()
+                Object.keys(myFiles).forEach(key => {
+                    formData.append(myFiles.item(key).name, myFiles.item(key))
+                })
+
+                const response = await fetch('http://localhost:5000/import_excel', {
+                    method: 'POST',
+                    body: formData,
+                })
+            }
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                sendFiles();
+            })
+        </script>
+    </body>
+    </html>

@@ -1,0 +1,17 @@
+<%-include('../head.ejs')%>
+
+    <body>
+        <header>
+            <h1>
+                <%=title%>
+            </h1>
+        </header>
+        <section id='myPlot'></section>
+        <script type='text/javascript'>
+            fetch('http://localhost:5000/quality/data').then(response => { return response.json() }).then(apiJsonData => {
+                renderDataAsChart(apiJsonData, 'cpaPunch', `<%-type%>`, 'CPA Punch');
+            })
+        </script>
+    </body>
+
+    </html>

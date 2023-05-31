@@ -1,0 +1,39 @@
+<!-- <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+<%-include('head.ejs')%>
+    <section id="update">
+        <section id="update-status">
+            <div class="row my-5 mx-5">
+                <div class="col-md-8">
+                    <form id="update">
+                        <label for="action" class="form-label">Action Planned</label>
+                        <input type="text" class="form-control" id="action">
+                        <label for="calendar" class="form-label">Target Date</label>
+                        <input type="date" class="form-control" id="calendar">
+                        <label for="status" class="form-label">Status</label>
+                        <select id=status class="form-select" aria-label="Status of Action">
+                            <option>Active</option>
+                            <option>Completed</option>
+                            <option>Delayed</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="row my-5 mx-5">
+                <div class="col-md-8">
+                    <form id="test">
+                        <label for="calendar" class="form-label">Target Month</label>
+                        <input type="date" class="form-control" id="calendar" name="month">
+                        <label for="target" class="form-label">Target</label>
+                        <input type="number" class="form-control" id="target" name="target">
+                        <label for="actual" class="form-label">Actual</label>
+                        <input type="number" class="form-control" id="actual" name="actual">
+                        <button type="submit" class="btn btn-primary my-3">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </section>

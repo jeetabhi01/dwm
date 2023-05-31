@@ -1,0 +1,35 @@
+<%-include('head.ejs')%>
+<!-- <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
+    <section id="graph">
+        <div id="myPlot"></div>
+    </section>
+    <section>
+        <div class="row my-5 mx-5">
+            <div class="col-md-8">
+                <form id="update-target" action="/updateTarget" method="post">
+                    <label for="calendar" class="form-label">Target Month</label>
+                    <input type="month" class="form-control" id="calendar" name="month" required>
+                    <label for="target" class="form-label">Target</label>
+                    <input type="number" class="form-control" id="target" name="target" required>
+                    <label for="actual" class="form-label">Actual</label>
+                    <input type="number" class="form-control" id="actual" name="actual" required>
+                    <button type="submit" class="btn btn-success my-3">Add </button>
+                </form>
+            </div>
+        </div>
+        <div class="row my-5 mx-5">
+            <div class="col-md-8">
+                <form id="update-target" action="/deleteTarget" method="post">
+                    <select id=delete class="form-select my-1" aria-label="Delete a entry" name="month" required>
+                    </select>
+                    <br>
+                    <button type="submit" class="btn btn-danger my-3">Delete </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="/utils/RenderDataInChart.js" defer></script>
+    <script src="/utils/graph.js" defer></script>
+    </body>
+
+    </html>
